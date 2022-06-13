@@ -1,6 +1,7 @@
 package ru.job4j.io;
 
 import java.io.FileOutputStream;
+import java.io.IOException;
 
 public class MatrixToFile {
     public static void multiple(int size) {
@@ -13,7 +14,7 @@ public class MatrixToFile {
                 out.write(el.append(System.lineSeparator())
                         .toString().getBytes());
             }
-        } catch (Exception e) {
+        } catch (IOException e) {
             e.printStackTrace();
         }
     }
